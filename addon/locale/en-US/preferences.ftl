@@ -1,4 +1,4 @@
-pref-title = Addon Template Example
+pref-title = Shapes Note Example
 pref-enable =
     .label = Enable
 pref-input = Input

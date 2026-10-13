@@ -142,7 +142,7 @@ export class UIExampleFactory {
     // item menuitem with icon
     ztoolkit.Menu.register("item", {
       tag: "menuitem",
-      id: "zotero-itemmenu-addontemplate-test",
+      id: "zotero-itemmenu-shapesnote-test",
       label: getString("menuitem-label"),
       commandListener: (ev) => addon.hooks.onDialogEvents("dialogExample"),
       icon: menuIcon,
@@ -166,7 +166,7 @@ export class UIExampleFactory {
       },
       "before",
       win.document?.querySelector(
-        "#zotero-itemmenu-addontemplate-test",
+        "#zotero-itemmenu-shapesnote-test",
       ) as XUL.MenuItem,
     );
   }
@@ -354,7 +354,7 @@ export class PromptExampleFactory {
     ztoolkit.Prompt.register([
       {
         name: "Normal Command Test",
-        label: "Plugin Template",
+        label: "Shapes Note",
         callback(prompt) {
           ztoolkit.getGlobal("alert")("Command triggered!");
         },
@@ -567,7 +567,7 @@ export class PromptExampleFactory {
     ztoolkit.Prompt.register([
       {
         name: "Conditional Command Test",
-        label: "Plugin Template",
+        label: "Shapes Note",
         // The when function is executed when Prompt UI is woken up by `Shift + P`, and this command does not display when false is returned.
         when: () => {
           const items = ztoolkit.getGlobal("ZoteroPane").getSelectedItems();
@@ -823,11 +823,11 @@ export class HelperExampleFactory {
   static clipboardExample() {
     new ztoolkit.Clipboard()
       .addText(
-        "![Plugin Template](https://github.com/windingwind/zotero-plugin-template)",
+        "![Shapes Note](https://github.com/Asianfleet/zotero-shapes-note)",
         "text/unicode",
       )
       .addText(
-        '<a href="https://github.com/windingwind/zotero-plugin-template">Plugin Template</a>',
+        '<a href="https://github.com/Asianfleet/zotero-shapes-note">Shapes Note</a>',
         "text/html",
       )
       .copy();
